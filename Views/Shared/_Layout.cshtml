@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Minha Aplicação</title>
+    <link rel="stylesheet" href="~/css/_Layout.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <script src="~/js/site.js"></script>
+    @RenderSection("Styles", required: false) <!-- Esta seção permitirá que o CSS específico do Index seja incluído -->
+</head>
+<body>
+<header>
+    <div class="header-container">
+        <div class="rock-icon-circle">
+            <img src="~/images/rochas.svg" alt="Ícone da Pedra" class="rock-icon" />
+        </div>
+        <nav>
+            <ul>
+                <li><a asp-controller="Home" asp-action="Index">Início</a></li>
+                <li><a asp-controller="Account" asp-action="Register">Registrar</a></li>
+                <li><a asp-controller="Purchase" asp-action="Index">Compra</a></li>
+                <li><a asp-controller="Home" asp-action="About">Sobre</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main role="main" class="container">
+    @RenderBody()  <!-- Aqui é onde o conteúdo específico da página será inserido -->
+</main>
+
+<footer>
+    <p>© 2024 Minha Aplicação. Todos os direitos reservados.</p>
+</footer>
+</body>
+</html>

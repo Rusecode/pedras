@@ -1,0 +1,58 @@
+﻿@{
+    ViewData["Title"] = "Nome empresa";
+    Layout = "_Layout";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/index.css" />
+}
+
+<main role="main" class="container">
+    <div class="glass-effect">
+        <section class="left-side">
+            <div class="company-info">
+                <!-- Nome da empresa -->
+                <h1 class="company-name">Nome empresa</h1>
+                <h2 class="translucent-text text-shadow">Descubra a Beleza Natural das Pedras em Guaratiba</h2>
+                <p class="translucent-text text-shadow">
+                    Localizados na Ilha de Guaratiba, trazemos pedras de alta qualidade para ornamentação e paisagismo, ideais para criar ambientes únicos e sofisticados. Nossas pedras contam histórias, com texturas e cores que refletem a beleza da região. Transforme seu espaço em um refúgio de charme e autenticidade. Visite-nos e descubra a beleza natural para enriquecer seu ambiente.
+                </p>
+            </div>
+        </section>
+
+        <section class="right-side">
+            <!-- Formulário de login -->
+            <form class="login-form" action="#" method="post">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <div class="input-with-icon">
+                        <img src="~/images/account.svg" alt="Ícone de Conta" class="icon" />
+                        <input type="email" id="email" name="email" placeholder="Digite seu email" required />
+                    </div>
+                    <hr class="input-underline" />
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha</label>
+                    <div class="input-with-icon">
+                        <img src="~/images/key.svg" alt="Ícone de Senha" class="icon" />
+                        <input type="password" id="password" name="password" placeholder="Digite sua senha" required />
+                    </div>
+                    <hr class="input-underline" />
+                </div>
+                <button type="submit" class="outline-button">Entrar</button>
+                <div class="create-account">
+                    <p>Não tem uma conta? <a href="/criar-conta">Crie sua conta aqui</a></p>
+                </div>
+            </form>
+
+            <div class="social-container">
+                <span class="social-text">Redes Sociais</span>
+                <div class="social-icons">
+                    <img src="~/images/facebook.svg" alt="Facebook" class="social-icon" />
+                    <img src="~/images/instagram.svg" alt="Instagram" class="social-icon" />
+                    <img src="~/images/whatsapp.svg" alt="WhatsApp" class="social-icon" />
+                </div>
+            </div>
+        </section>
+    </div>
+</main>

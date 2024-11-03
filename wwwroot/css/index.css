@@ -1,0 +1,232 @@
+/* Estilo do box translúcido */
+.glass-effect {
+    display: flex;
+    border-radius: 10px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    gap: 20px; /* Aumentando o espaço entre os elementos filhos */
+}
+
+/* Estilo da metade esquerda com efeito de vidro */
+.left-side {
+    flex: 2;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+/* Estilo da metade direita para o login */
+.right-side {
+    flex: 1;
+    background-color: #dbd9b7;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+/* Estilo do container do ícone da rocha */
+.icon-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Estilo do nome da empresa */
+.company-name {
+    text-align: center;
+    color: rgba(193, 201, 200, 0.8);
+    font-size: 6em; /* Aumentando o tamanho da fonte do nome da empresa */
+    margin: 0;
+    font-weight: 500;
+    margin-bottom: 20px; /* Aumentando o espaçamento abaixo do nome da empresa */
+}
+
+/* Estilo do formulário de login */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+/* Rótulos */
+label {
+    font-weight: 300;
+    margin-bottom: 4px;
+    color: #615566;
+    font-size: 0.75em;
+}
+
+/* Estilo do container dos inputs com ícone */
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    height: 35px;
+}
+
+/* Estilo do ícone dentro dos inputs */
+.icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    filter: invert(0.5);
+    transition: transform 0.3s ease;
+}
+
+.icon:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo dos inputs */
+input[type="email"],
+input[type="password"] {
+    border: none;
+    outline: none;
+    font-size: 0.75em;
+    flex: 1;
+    background-color: transparent;
+    color: #615566;
+    padding: 2px 0;
+}
+
+/* Estilo do placeholder */
+input::placeholder {
+    color: rgba(97, 85, 102, 0.8);
+}
+
+/* Estilo do botão com contorno #615566 */
+.outline-button {
+    padding: 6px;
+    background-color: transparent;
+    color: #615566;
+    border: 2px solid #615566;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.75em;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.outline-button:hover {
+    background-color: #615566;
+    color: #fff;
+}
+
+/* Mensagem para criar conta */
+.create-account {
+    text-align: center;
+    margin-top: 12px;
+    color: #615566;
+    font-weight: 300;
+    font-size: 0.75em;
+}
+
+.create-account a {
+    color: #615566;
+    text-decoration: underline;
+}
+
+.create-account a:hover {
+    text-decoration: none;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    flex: 1;
+    padding: 0;
+    overflow-y: hidden;
+}
+
+/* Ajuste do box translúcido */
+main .glass-effect {
+    height: calc(100% - 40px);
+}
+
+/* Ícones sociais */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    cursor: pointer;
+    filter: invert(0.5);
+}
+
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+.social-text {
+    color: #615566;
+    margin-right: 8px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 12px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Linha de sublinhado dos inputs */
+.input-underline {
+    border: none;
+    border-top: 2px solid #615566;
+    margin-top: -5px;
+}
+
+/* Texto centralizado na parte translúcida */
+.translucent-text {
+    text-align: center;
+    font-size: 1.2em; /* Aumentando o tamanho da fonte do subtítulo e do texto */
+    color: rgba(193, 201, 200, 0.8);
+    margin: 15px 0; /* Aumentando o espaçamento vertical do texto */
+    padding: 20px 0;
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .glass-effect {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .left-side, .right-side {
+        width: 100%;
+    }
+
+    .company-name {
+        font-size: 2em; /* Ajustando para responsividade */
+    }
+
+    .translucent-text {
+        font-size: 1.2em; /* Ajustando para responsividade */
+    }
+
+    .social-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
